@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Paws | Professional Pet Shop</title>
+
+<style>
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',Arial,sans-serif;
+}
+
+body{
+  background:#fdfefe;
+  color:#333;
+}
+
+/* ===== HEADER ===== */
+header{
+  background:#ff914d;
+  color:white;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+header h1{
+  font-size:26px;
+}
+
+nav a{
+  margin-left:25px;
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+}
+
+nav a:hover{
+  text-decoration:underline;
+}
+
+/* ===== HERO ===== */
+.hero{
+  background:linear-gradient(120deg,#ffb347,#ff914d);
+  color:white;
+  padding:90px 20px;
+  text-align:center;
+}
+
+.hero h2{
+  font-size:44px;
+}
+
+.hero p{
+  font-size:18px;
+  margin:15px 0;
+}
+
+.hero button{
+  background:white;
+  color:#ff914d;
+  border:none;
+  padding:12px 30px;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:60px auto;
+}
+
+.container h2{
+  text-align:center;
+  margin-bottom:30px;
+  font-size:32px;
+}
+
+/* ===== SERVICES ===== */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.service{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  text-align:center;
+}
+
+/* ===== CARDS ===== */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+  text-align:center;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card h3{
+  margin:12px 0;
+}
+
+.price{
+  color:#e91e63;
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+button{
+  background:#ff914d;
+  color:white;
+  border:none;
+  padding:10px 18px;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#e67e22;
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.testimonial{
+  background:#fff3ea;
+  padding:25px;
+  border-radius:12px;
+}
+
+/* ===== FAQ ===== */
+.faq{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.1);
+}
+
+.faq p{
+  margin:10px 0;
+}
+
+/* ===== NEWSLETTER ===== */
+.newsletter{
+  background:#ff914d;
+  color:white;
+  padding:40px;
+  text-align:center;
+  border-radius:12px;
+}
+
+.newsletter input{
+  padding:10px;
+  width:250px;
+  border:none;
+  border-radius:20px;
+  margin-top:15px;
+}
+
+/* ===== CONTACT ===== */
+.contact{
+  background:#fff3ea;
+  padding:30px;
+  border-radius:12px;
+  text-align:center;
+}
+
+.contact input,.contact textarea{
+  width:80%;
+  padding:10px;
+  margin:10px 0;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#333;
+  color:white;
+  text-align:center;
+  padding:15px;
+  margin-top:60px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:600px){
+  header{
+    flex-direction:column;
+  }
+  nav{
+    margin-top:10px;
+  }
+  .hero h2{
+    font-size:30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🐾 Happy Paws</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#adoption">Adoption</a>
+    <a href="#shop">Shop</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h2>Where Pets Find Love & Care</h2>
+  <p>Adoption • Grooming • Products • Health Care</p>
+  <button>Explore Now</button>
+</section>
+
+<section class="container" id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service">🐶 Pet Grooming</div>
+    <div class="service">🏥 Veterinary Care</div>
+    <div class="service">🎓 Pet Training</div>
+    <div class="service">🏠 Pet Boarding</div>
+  </div>
+</section>
+
+<section class="container" id="adoption">
+  <h2>Pets for Adoption</h2>
+  <div class="cards">
+    <div class="card"><img src="https://images.unsplash.com/photo-1558788353-f76d92427f16"><h3>Buddy</h3><button>Adopt</button></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91"><h3>Luna</h3><button>Adopt</button></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d"><h3>Max</h3><button>Adopt</button></div>
+  </div>
+</section>
+
+<section class="container" id="shop">
+  <h2>Pet Products</h2>
+  <div class="cards">
+    <div class="card"><img src="food.jpg"><h3>Dog Food</h3><p class="price">₹899</p><button>Add</button></div>
+    <div class="card"><img src="p.jpg"><h3>Pet Toys</h3><p class="price">₹499</p><button>Add</button></div>
+    <div class="card"><img src="b.jpg"><h3>Pet Bed</h3><p class="price">₹1599</p><button>Add</button></div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>What Our Customers Say</h2>
+  <div class="testimonials">
+    <div class="testimonial">“Best pet shop ever!” – Ramesh</div>
+    <div class="testimonial">“Healthy pets & friendly staff.” – Anjali</div>
+    <div class="testimonial">“Adopted my puppy here ❤️” – Karthik</div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>FAQ</h2>
+  <div class="faq">
+    <p><b>Do you provide adoption?</b> Yes</p>
+    <p><b>Do you offer grooming?</b> Yes</p>
+    <p><b>Are pets vaccinated?</b> 100%</p>
+  </div>
+</section>
+
+<section class="container">
+  <div class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <input placeholder="Enter your email">
+  </div>
+</section>
+
+<section class="container" id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact">
+    <input placeholder="Name">
+    <input placeholder="Email">
+    <textarea rows="4" placeholder="Message"></textarea><br>
+    <button>Send</button>
+  </div>
+</section>
+
+<footer>
+  © 2025 Happy Paws | Advanced Pet Shop Website
+</footer>
+
+</body>
+</html>
