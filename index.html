@@ -335,6 +335,54 @@ footer{
     padding: 8px 16px;
   }
 }
+/* ================= HAMBURGER MENU ================= */
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Desktop */
+nav {
+  display: flex;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 18px;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #ff914d;
+    margin-top: 15px;
+    border-radius: 10px;
+  }
+
+  nav a {
+    padding: 14px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.3);
+  }
+
+  nav.show {
+    display: flex;
+  }
+}
+
 
 </style>
 </head>
@@ -342,26 +390,18 @@ footer{
 <body>
 
 <header>
- <header>
   <h1>🐾 Happy Paws</h1>
 
-  <!-- Hamburger Checkbox -->
-  <input type="checkbox" id="menu-toggle">
-
   <!-- Hamburger Icon -->
-  <label for="menu-toggle" class="menu-icon">
-    ☰
-  </label>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#adoption">Adoption</a>
-    <a href="#shop">Shop</a>
-    <a href="#contact">Contact</a>
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="adoption.html">Adoption</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
   </nav>
-</header>
-
 </header>
 
 <section class="hero" id="home">
@@ -436,6 +476,12 @@ footer{
 <footer>
   © 2025 Happy Paws | Advanced Pet Shop Website
 </footer>
+<script>
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
+
 
 </body>
 </html>
