@@ -230,6 +230,112 @@ footer{
     font-size:30px;
   }
 }
+/* ================= ALIGNMENT FIXES ================= */
+
+/* Center cards content properly */
+.service,
+.card,
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Improve text alignment consistency */
+.card h3,
+.card p,
+.service,
+.testimonial,
+.faq p {
+  text-align: center;
+}
+
+/* Button alignment */
+.card button,
+.hero button,
+.contact button {
+  margin: 12px auto;
+  display: block;
+}
+
+/* Fix image overflow on small screens */
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ================= MOBILE RESPONSIVENESS ================= */
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 15px 20px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 8px 12px;
+  }
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .container {
+    margin: 40px auto;
+  }
+
+  .container h2 {
+    font-size: 26px;
+  }
+
+  .newsletter input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .contact input,
+  .contact textarea {
+    width: 100%;
+  }
+}
+
+/* ================= EXTRA SMALL DEVICES ================= */
+
+@media (max-width: 480px) {
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
 </style>
 </head>
 
