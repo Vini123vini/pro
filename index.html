@@ -6,12 +6,12 @@
 <title>Happy Paws | Professional Pet Shop</title>
 
 <style>
-/* ========== RESET ========== */
+/* ===== RESET ===== */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Segoe UI', Arial, sans-serif;
+  font-family:'Segoe UI',Arial,sans-serif;
 }
 
 html{
@@ -23,11 +23,11 @@ body{
   color:#333;
 }
 
-/* ========== HEADER ========== */
+/* ===== HEADER ===== */
 header{
   background:#ff914d;
-  color:#fff;
-  padding:15px 40px;
+  color:white;
+  padding:15px 20px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -40,6 +40,7 @@ header h1{
   font-size:26px;
 }
 
+/* NAV */
 nav{
   display:flex;
 }
@@ -55,14 +56,14 @@ nav a:hover{
   text-decoration:underline;
 }
 
-/* Hamburger */
+/* HAMBURGER */
 .menu-icon{
   display:none;
   font-size:30px;
   cursor:pointer;
 }
 
-/* ========== HERO ========== */
+/* ===== HERO ===== */
 .hero{
   background:linear-gradient(120deg,#ffb347,#ff914d);
   color:white;
@@ -71,7 +72,7 @@ nav a:hover{
 }
 
 .hero h2{
-  font-size:44px;
+  font-size:42px;
 }
 
 .hero p{
@@ -89,7 +90,7 @@ nav a:hover{
   cursor:pointer;
 }
 
-/* ========== CONTAINER ========== */
+/* ===== CONTAINER ===== */
 .container{
   width:90%;
   max-width:1200px;
@@ -102,7 +103,7 @@ nav a:hover{
   font-size:32px;
 }
 
-/* ========== SERVICES ========== */
+/* ===== SERVICES ===== */
 .services{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -111,14 +112,14 @@ nav a:hover{
 
 .service{
   background:white;
-  padding:30px;
+  padding:25px;
   border-radius:12px;
   box-shadow:0 8px 20px rgba(0,0,0,0.08);
   text-align:center;
   font-size:18px;
 }
 
-/* ========== CARDS ========== */
+/* ===== CARDS ===== */
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -161,13 +162,15 @@ button{
   padding:10px 18px;
   border-radius:20px;
   cursor:pointer;
+  display:block;
+  margin:10px auto;
 }
 
 button:hover{
   background:#e67e22;
 }
 
-/* ========== TESTIMONIALS ========== */
+/* ===== TESTIMONIALS ===== */
 .testimonials{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -181,7 +184,7 @@ button:hover{
   text-align:center;
 }
 
-/* ========== FAQ ========== */
+/* ===== FAQ ===== */
 .faq{
   background:white;
   padding:25px;
@@ -191,10 +194,9 @@ button:hover{
 
 .faq p{
   margin:10px 0;
-  text-align:center;
 }
 
-/* ========== NEWSLETTER ========== */
+/* ===== NEWSLETTER ===== */
 .newsletter{
   background:#ff914d;
   color:white;
@@ -205,13 +207,14 @@ button:hover{
 
 .newsletter input{
   padding:10px;
-  width:250px;
+  width:100%;
+  max-width:320px;
   border:none;
   border-radius:20px;
   margin-top:15px;
 }
 
-/* ========== CONTACT ========== */
+/* ===== CONTACT ===== */
 .contact{
   background:#fff3ea;
   padding:30px;
@@ -221,14 +224,14 @@ button:hover{
 
 .contact input,
 .contact textarea{
-  width:80%;
+  width:100%;
   padding:10px;
   margin:10px 0;
   border-radius:6px;
   border:1px solid #ccc;
 }
 
-/* ========== FOOTER ========== */
+/* ===== FOOTER ===== */
 footer{
   background:#333;
   color:white;
@@ -237,11 +240,10 @@ footer{
   margin-top:60px;
 }
 
-/* ========== RESPONSIVE NAVBAR ========== */
+/* ===== MOBILE ===== */
 @media(max-width:768px){
 
   header{
-    padding:15px 20px;
     flex-wrap:wrap;
   }
 
@@ -260,6 +262,7 @@ footer{
 
   nav a{
     padding:14px;
+    margin:0;
     text-align:center;
     border-top:1px solid rgba(255,255,255,0.3);
   }
@@ -268,8 +271,32 @@ footer{
     display:flex;
   }
 
+  .hero{
+    padding:60px 15px;
+  }
+
   .hero h2{
-    font-size:28px;
+    font-size:26px;
+  }
+
+  .container{
+    width:95%;
+    margin:40px auto;
+  }
+}
+
+@media(max-width:480px){
+
+  header h1{
+    font-size:22px;
+  }
+
+  .hero h2{
+    font-size:22px;
+  }
+
+  .container h2{
+    font-size:24px;
   }
 }
 </style>
@@ -280,7 +307,6 @@ footer{
 <header>
   <h1>🐾 Happy Paws</h1>
   <div class="menu-icon" onclick="toggleMenu()">☰</div>
-
   <nav id="navMenu">
     <a href="#home" onclick="toggleMenu()">Home</a>
     <a href="#services" onclick="toggleMenu()">Services</a>
@@ -330,43 +356,19 @@ footer{
 <section class="container" id="shop">
   <h2>Pet Products</h2>
   <div class="cards">
-    <div class="card">
-      <img src="food.jpg">
-      <h3>Dog Food</h3>
-      <p class="price">₹899</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="p.jpg">
-      <h3>Pet Toys</h3>
-      <p class="price">₹499</p>
-      <button>Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="b.jpg">
-      <h3>Pet Bed</h3>
-      <p class="price">₹1599</p>
-      <button>Add to Cart</button>
-    </div>
-  </div>
-</section>
-
-<section class="container">
-  <h2>What Our Customers Say</h2>
-  <div class="testimonials">
-    <div class="testimonial">“Best pet shop ever!” – Ramesh</div>
-    <div class="testimonial">“Healthy pets & friendly staff.” – Anjali</div>
-    <div class="testimonial">“Adopted my puppy here ❤️” – Karthik</div>
+    <div class="card"><img src="food.jpg"><h3>Dog Food</h3><p class="price">₹899</p><button>Add</button></div>
+    <div class="card"><img src="p.jpg"><h3>Pet Toys</h3><p class="price">₹499</p><button>Add</button></div>
+    <div class="card"><img src="b.jpg"><h3>Pet Bed</h3><p class="price">₹1599</p><button>Add</button></div>
   </div>
 </section>
 
 <section class="container" id="contact">
   <h2>Contact Us</h2>
   <div class="contact">
-    <input type="text" placeholder="Name">
-    <input type="email" placeholder="Email">
-    <textarea rows="4" placeholder="Message"></textarea><br>
-    <button>Send Message</button>
+    <input placeholder="Name">
+    <input placeholder="Email">
+    <textarea rows="4" placeholder="Message"></textarea>
+    <button>Send</button>
   </div>
 </section>
 
