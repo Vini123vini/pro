@@ -6,12 +6,16 @@
 <title>Happy Paws | Professional Pet Shop</title>
 
 <style>
-/* ===== RESET ===== */
+/* ========== RESET ========== */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Segoe UI',Arial,sans-serif;
+  font-family:'Segoe UI', Arial, sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
@@ -19,10 +23,10 @@ body{
   color:#333;
 }
 
-/* ===== HEADER ===== */
+/* ========== HEADER ========== */
 header{
   background:#ff914d;
-  color:white;
+  color:#fff;
   padding:15px 40px;
   display:flex;
   justify-content:space-between;
@@ -36,6 +40,10 @@ header h1{
   font-size:26px;
 }
 
+nav{
+  display:flex;
+}
+
 nav a{
   margin-left:25px;
   color:white;
@@ -47,7 +55,14 @@ nav a:hover{
   text-decoration:underline;
 }
 
-/* ===== HERO ===== */
+/* Hamburger */
+.menu-icon{
+  display:none;
+  font-size:30px;
+  cursor:pointer;
+}
+
+/* ========== HERO ========== */
 .hero{
   background:linear-gradient(120deg,#ffb347,#ff914d);
   color:white;
@@ -74,7 +89,7 @@ nav a:hover{
   cursor:pointer;
 }
 
-/* ===== CONTAINER ===== */
+/* ========== CONTAINER ========== */
 .container{
   width:90%;
   max-width:1200px;
@@ -87,7 +102,7 @@ nav a:hover{
   font-size:32px;
 }
 
-/* ===== SERVICES ===== */
+/* ========== SERVICES ========== */
 .services{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -96,13 +111,14 @@ nav a:hover{
 
 .service{
   background:white;
-  padding:25px;
+  padding:30px;
   border-radius:12px;
   box-shadow:0 8px 20px rgba(0,0,0,0.08);
   text-align:center;
+  font-size:18px;
 }
 
-/* ===== CARDS ===== */
+/* ========== CARDS ========== */
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -151,7 +167,7 @@ button:hover{
   background:#e67e22;
 }
 
-/* ===== TESTIMONIALS ===== */
+/* ========== TESTIMONIALS ========== */
 .testimonials{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -162,9 +178,10 @@ button:hover{
   background:#fff3ea;
   padding:25px;
   border-radius:12px;
+  text-align:center;
 }
 
-/* ===== FAQ ===== */
+/* ========== FAQ ========== */
 .faq{
   background:white;
   padding:25px;
@@ -174,9 +191,10 @@ button:hover{
 
 .faq p{
   margin:10px 0;
+  text-align:center;
 }
 
-/* ===== NEWSLETTER ===== */
+/* ========== NEWSLETTER ========== */
 .newsletter{
   background:#ff914d;
   color:white;
@@ -193,7 +211,7 @@ button:hover{
   margin-top:15px;
 }
 
-/* ===== CONTACT ===== */
+/* ========== CONTACT ========== */
 .contact{
   background:#fff3ea;
   padding:30px;
@@ -201,7 +219,8 @@ button:hover{
   text-align:center;
 }
 
-.contact input,.contact textarea{
+.contact input,
+.contact textarea{
   width:80%;
   padding:10px;
   margin:10px 0;
@@ -209,7 +228,7 @@ button:hover{
   border:1px solid #ccc;
 }
 
-/* ===== FOOTER ===== */
+/* ========== FOOTER ========== */
 footer{
   background:#333;
   color:white;
@@ -218,172 +237,41 @@ footer{
   margin-top:60px;
 }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:600px){
+/* ========== RESPONSIVE NAVBAR ========== */
+@media(max-width:768px){
+
   header{
-    flex-direction:column;
+    padding:15px 20px;
+    flex-wrap:wrap;
   }
+
+  .menu-icon{
+    display:block;
+  }
+
   nav{
-    margin-top:10px;
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background:#ff914d;
+    margin-top:15px;
+    border-radius:10px;
   }
+
+  nav a{
+    padding:14px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.3);
+  }
+
+  nav.show{
+    display:flex;
+  }
+
   .hero h2{
-    font-size:30px;
+    font-size:28px;
   }
 }
-/* ================= ALIGNMENT FIXES ================= */
-
-/* Center cards content properly */
-.service,
-.card,
-.testimonial {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Improve text alignment consistency */
-.card h3,
-.card p,
-.service,
-.testimonial,
-.faq p {
-  text-align: center;
-}
-
-/* Button alignment */
-.card button,
-.hero button,
-.contact button {
-  margin: 12px auto;
-  display: block;
-}
-
-/* Fix image overflow on small screens */
-.card img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ================= MOBILE RESPONSIVENESS ================= */
-
-@media (max-width: 768px) {
-
-  header {
-    padding: 15px 20px;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav a {
-    margin: 8px 12px;
-  }
-
-  .hero {
-    padding: 60px 15px;
-  }
-
-  .hero h2 {
-    font-size: 28px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .container {
-    margin: 40px auto;
-  }
-
-  .container h2 {
-    font-size: 26px;
-  }
-
-  .newsletter input {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .contact input,
-  .contact textarea {
-    width: 100%;
-  }
-}
-
-/* ================= EXTRA SMALL DEVICES ================= */
-
-@media (max-width: 480px) {
-
-  header h1 {
-    font-size: 22px;
-  }
-
-  .hero h2 {
-    font-size: 24px;
-  }
-
-  .hero p {
-    font-size: 15px;
-  }
-
-  button {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-}
-/* ================= HAMBURGER MENU ================= */
-
-.menu-icon {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-/* Desktop */
-nav {
-  display: flex;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-
-  header {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .menu-icon {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 18px;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #ff914d;
-    margin-top: 15px;
-    border-radius: 10px;
-  }
-
-  nav a {
-    padding: 14px;
-    text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.3);
-  }
-
-  nav.show {
-    display: flex;
-  }
-}
-
-
 </style>
 </head>
 
@@ -391,16 +279,14 @@ nav {
 
 <header>
   <h1>🐾 Happy Paws</h1>
-
-  <!-- Hamburger Icon -->
   <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
   <nav id="navMenu">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="adoption.html">Adoption</a>
-    <a href="shop.html">Shop</a>
-    <a href="contact.html">Contact</a>
+    <a href="#home" onclick="toggleMenu()">Home</a>
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#adoption" onclick="toggleMenu()">Adoption</a>
+    <a href="#shop" onclick="toggleMenu()">Shop</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
   </nav>
 </header>
 
@@ -423,18 +309,45 @@ nav {
 <section class="container" id="adoption">
   <h2>Pets for Adoption</h2>
   <div class="cards">
-    <div class="card"><img src="https://images.unsplash.com/photo-1558788353-f76d92427f16"><h3>Buddy</h3><button>Adopt</button></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91"><h3>Luna</h3><button>Adopt</button></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d"><h3>Max</h3><button>Adopt</button></div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16">
+      <h3>Buddy</h3>
+      <button>Adopt</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91">
+      <h3>Luna</h3>
+      <button>Adopt</button>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d">
+      <h3>Max</h3>
+      <button>Adopt</button>
+    </div>
   </div>
 </section>
 
 <section class="container" id="shop">
   <h2>Pet Products</h2>
   <div class="cards">
-    <div class="card"><img src="food.jpg"><h3>Dog Food</h3><p class="price">₹899</p><button>Add</button></div>
-    <div class="card"><img src="p.jpg"><h3>Pet Toys</h3><p class="price">₹499</p><button>Add</button></div>
-    <div class="card"><img src="b.jpg"><h3>Pet Bed</h3><p class="price">₹1599</p><button>Add</button></div>
+    <div class="card">
+      <img src="food.jpg">
+      <h3>Dog Food</h3>
+      <p class="price">₹899</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="p.jpg">
+      <h3>Pet Toys</h3>
+      <p class="price">₹499</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="b.jpg">
+      <h3>Pet Bed</h3>
+      <p class="price">₹1599</p>
+      <button>Add to Cart</button>
+    </div>
   </div>
 </section>
 
@@ -447,41 +360,25 @@ nav {
   </div>
 </section>
 
-<section class="container">
-  <h2>FAQ</h2>
-  <div class="faq">
-    <p><b>Do you provide adoption?</b> Yes</p>
-    <p><b>Do you offer grooming?</b> Yes</p>
-    <p><b>Are pets vaccinated?</b> 100%</p>
-  </div>
-</section>
-
-<section class="container">
-  <div class="newsletter">
-    <h2>Subscribe to Our Newsletter</h2>
-    <input placeholder="Enter your email">
-  </div>
-</section>
-
 <section class="container" id="contact">
   <h2>Contact Us</h2>
   <div class="contact">
-    <input placeholder="Name">
-    <input placeholder="Email">
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="Email">
     <textarea rows="4" placeholder="Message"></textarea><br>
-    <button>Send</button>
+    <button>Send Message</button>
   </div>
 </section>
 
 <footer>
-  © 2025 Happy Paws | Advanced Pet Shop Website
+  © 2025 Happy Paws | Professional Pet Shop Website
 </footer>
+
 <script>
-function toggleMenu() {
+function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("show");
 }
 </script>
-
 
 </body>
 </html>
